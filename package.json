@@ -1,0 +1,31 @@
+{
+  "name": "tax-year",
+  "version": "1.0.0",
+  "description": "Fiscal tax year calculator, retrieve the tax-year, month and week for a given date. Start date of the financial year is editable.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoine-Mace/tax-year.git"
+  },
+  "keywords": [
+    "tax-year",
+    "financial",
+    "accounting",
+    "payroll",
+    "node",
+    "algorithm",
+    "Sage"
+  ],
+  "author": "Antoine Mace",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Antoine-Mace/tax-year/issues"
+  },
+  "homepage": "https://github.com/Antoine-Mace/tax-year#readme"
+}
