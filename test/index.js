@@ -1,24 +1,6 @@
-# Tax Year
-Fiscal tax year calculator, retrieve the tax-year, month and week for a given date.
-
-## Quick start
-
-Install onto your node project using `yarn` or `npm`:
-
-```
-yarn add tax-year
-```
-
-```
-npm install tax-year
-```
-
-To use:
-
-```
 'use strict'
 
-const taxYear = require('tax-year')
+const taxYear = require('../')
 
 const today = new Date()
 const calculator = taxYear()
@@ -53,20 +35,3 @@ function runTest() {
 }
 
 runTest()
-```
-
-
-## Test
-
-```
-yarn test
-```
-
-```
-npm run test
-```
-
-## License
-
-This project is [MIT licensed](./LICENSE). By contributing you agree that your contributions will be licensed under its
-MIT license.
