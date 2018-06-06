@@ -1,17 +1,13 @@
 'use strict'
 
-class taxYear {
-  constructor(fys) {
-    this.FYS = fys
+function taxYear (fys) {
+  this.FYS = fys
 
-    this.getTaxYear.bind(this)
-  }
-
-  setFYS (newFYS) {
+  this.setFYS = function (newFYS) {
     Object.assign(this.FYS, newFYS)
   }
 
-  getTaxYear (date, financialYearStart = this.FYS) {
+  this.getTaxYear = function (date, financialYearStart = this.FYS) {
     let taxYear = {
       yearIn: 'undefined',
       monthIn: 0,
