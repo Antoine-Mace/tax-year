@@ -1,38 +1,38 @@
 'use strict'
 
-function taxYear (fys) {
+function taxYear(fys) {
   this.FYS = fys
 
   this.setFYS = function (newFYS) {
     Object.assign(this.FYS, newFYS)
   }
 
-  this.getTaxYear = function (date, financialYearStart = this.FYS) {
-    let taxYear = {
+  this.getTaxYear = function (date, financialYearStart) {
+    var taxYear = {
       yearIn: 'undefined',
       monthIn: 0,
       weekIn: 0
     }
 
-    const FYS = financialYearStart;
+    var FYS = financialYearStart ? financialYearStart : this.FYS;
 
-    const current = {
+    var current = {
       day: date.getDate(),
       month: date.getMonth() + 1,
       year: date.getFullYear()
     }
 
-    const operation = current.month >= FYS.month &&
+    var operation = current.month >= FYS.month &&
     (current.day >= FYS.day || current.month > FYS.month)
       ? 1
       : -1
 
-    const taxYearUse = (current.year + operation).toString()
+    var taxYearUse = (current.year + operation).toString()
     taxYear.yearIn = operation > 0
       ? current.year.toString() + "-" + taxYearUse
       : taxYearUse + "-" + current.year.toString()
 
-    const monthInYear = 12
+    var monthInYear = 12
     taxYear.monthIn = current.month >= FYS.month
       ? current.month - FYS.month
       : monthInYear - FYS.month + current.month
@@ -61,10 +61,10 @@ function taxYear (fys) {
   }
 }
 
-module.exports = (FYS) => {
-  const defaultFYS = Object.assign({
+module.exports = function (financialYearStart) {
+  var defaultFYS = Object.assign({
     day: 6,
     month: 4
-  }, FYS)
+  }, financialYearStart)
   return new taxYear(defaultFYS)
 }

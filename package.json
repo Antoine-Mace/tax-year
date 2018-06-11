@@ -1,6 +1,6 @@
 {
   "name": "tax-year",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fiscal tax year calculator, retrieve the tax-year, month and week for a given date. Start date of the financial year is editable.",
   "main": "index.js",
   "directories": {
