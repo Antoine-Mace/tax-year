@@ -1,3 +1,4 @@
+[![Download](https://img.shields.io/npm/dt/tax-year.svg)](https://www.npmjs.com/package/tax-year)
 # Tax Year
 Fiscal tax year calculator, retrieve the tax-year, month and week for a given date.
 
